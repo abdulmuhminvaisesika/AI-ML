@@ -1,0 +1,26 @@
+identity:
+  name: get_spaces_by_username
+  author: langgenius
+  label:
+    en_US: Get Spaces by Username
+    zh_Hans: 按用户名获取空间
+description:
+  human:
+    en_US: Get all Confluence spaces a specific user has access to (directly or via groups). Uses the plugin runtime credentials for authentication; only username is required as input.
+    zh_Hans: 获取特定用户可访问的所有 Confluence 空间（直接或通过组）。使用插件运行时凭证进行身份验证；仅需提供用户名作为输入。
+  llm: Returns a list of Confluence space keys that the specified user (by accountId, displayName, or email) has access to. Uses admin credentials from runtime, so only username is needed.
+parameters:
+  - name: username
+    type: string
+    required: true
+    label:
+      en_US: Username (displayName)
+      zh_Hans: 用户名（显示名称）
+    human_description:
+      en_US: The username to look up (display name).
+      zh_Hans: 要查找的用户名（可以是 accountId、显示名称或电子邮件）。
+    llm_description: The identity to match to users in permissions (exact accountId, or case-insensitive displayName/email).
+    form: llm
+extra:
+  python:
+    source: tools/get_spaces_by_username.py

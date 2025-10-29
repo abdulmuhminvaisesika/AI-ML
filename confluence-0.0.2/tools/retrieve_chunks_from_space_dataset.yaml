@@ -1,0 +1,37 @@
+identity:
+  name: retrieve_chunks_from_space_dataset
+  author: langgenius
+  label:
+    en_US: Retrieve Chunks from Space Dataset
+    zh_Hans: 从空间数据集检索内容块
+description:
+  human:
+    en_US: Retrieves top chunks from a space-level dataset in LLMStudio based on a query.
+    zh_Hans: 根据查询从 LLMStudio 中的空间级数据集检索内容块。
+  llm: Retrieves top chunks from a space-level dataset in LLMStudio. Requires the space key and a query. Returns top 10 chunks from the dataset.
+parameters:
+  - name: space_key
+    type: string
+    required: true
+    label:
+      en_US: Space Key
+      zh_Hans: 空间 Key
+    human_description:
+      en_US: The key of the Confluence space where data is stored.
+      zh_Hans: 数据存储的 Confluence 空间 Key。
+    llm_description: The unique key identifying the Confluence space (e.g., 'DOC').
+    form: llm
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query
+      zh_Hans: 查询
+    human_description:
+      en_US: The search query to retrieve relevant chunks.
+      zh_Hans: 用于检索相关内容块的查询。
+    llm_description: Query text to search in the space-level dataset.
+    form: llm
+extra:
+  python:
+    source: tools/retrieve_chunks_from_space_dataset.py

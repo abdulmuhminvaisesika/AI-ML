@@ -1,0 +1,26 @@
+identity:
+  name: sync_space_to_dataset
+  author: your_name
+  label:
+    en_US: Sync Confluence Space to Dataset
+    zh_Hans: 同步 Confluence 空间到知识库
+description:
+  human:
+    en_US: Syncs all Confluence pages and attachments under a space into a LLMStudio knowledge base dataset.
+    zh_Hans: 将 Confluence 空间下的所有页面和附件同步到 LLMStudio 知识库数据集中。
+  llm: Takes a Confluence space key, creates or updates a dataset in LLMStudio with all page contents and attachments. Returns the dataset_id.
+parameters:
+  - name: space_key
+    type: string
+    required: true
+    label:
+      en_US: Space Key
+      zh_Hans: 空间 Key
+    human_description:
+      en_US: The key of the Confluence space to sync.
+      zh_Hans: 要同步的 Confluence 空间的 Key。
+    llm_description: The unique key identifying the Confluence space (e.g., 'DS').
+    form: llm
+extra:
+  python:
+    source: tools/sync_space_to_dataset.py

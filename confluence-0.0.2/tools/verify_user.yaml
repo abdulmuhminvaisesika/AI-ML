@@ -1,0 +1,37 @@
+identity:
+  name: verify_user
+  author: sandlogic
+  label:
+    en_US: Verify Confluence User
+    zh_Hans: 验证 Confluence 用户
+description:
+  human:
+    en_US: Checks whether a given username and email belong to the same valid Confluence user in the current domain.
+    zh_Hans: 检查给定的用户名和电子邮件是否属于当前 Confluence 域中的同一有效用户。
+  llm: Verifies if the given username exists in the Confluence domain and if the provided email matches that user.
+parameters:
+  - name: username
+    type: string
+    required: true
+    label:
+      en_US: Username
+      zh_Hans: 用户名
+    human_description:
+      en_US: The full name of the user to verify.
+      zh_Hans: 要验证的用户的完整名称。
+    llm_description: Username (full name) of the user to verify in Confluence.
+    form: llm
+  - name: user_email
+    type: string
+    required: true
+    label:
+      en_US: User Email
+      zh_Hans: 用户邮箱
+    human_description:
+      en_US: The email address of the user to verify.
+      zh_Hans: 要验证的用户的电子邮件地址。
+    llm_description: Email of the user to verify in Confluence.
+    form: llm
+extra:
+  python:
+    source: tools/verify_user.py
