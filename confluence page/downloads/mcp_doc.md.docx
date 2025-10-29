@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atlassian Cloud Notifications - Page Unavailable</title>
+        <link rel="stylesheet" href="/_edge/resources/aui-prototyping.css">
+    </head>
+    <body>
+        <div id="page">
+            <section id="content" role="main" class="aui-page-notification aui-page-size-medium">
+                <div id="notifications" class="aui-page-panel">
+                    <div class="aui-page-header-inner">
+                        <section class="aui-page-panel-content">
+                            <h1>404</h1>
+                            <div class="aui-page-notification-description">
+                                Page not found
+                            </div>
+                            <br>
+                            <p style="color:#B3B3B3; font:normal 12px/18px Helvetica, Arial;">Request ID: 7e60723467eb4280a7da3ee08f426a35</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <section class="footer-body">
+                    <ul>
+                        <li><a href="https://status.atlassian.com">Atlassian Status</a></li>
+                        <li><a href="https://confluence.atlassian.com/display/cloud/What's+New">Release Summary</a></li>
+                        <li><a href="https://confluence.atlassian.com/display/Cloud/Atlassian+Cloud+Documentation">Documentation</a></li>
+                        <li><a href="https://answers.atlassian.com">Answers</a></li>
+                    </ul>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/" target="_blank">Atlassian</a></div>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>
