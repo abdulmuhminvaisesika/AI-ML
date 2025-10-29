@@ -1,0 +1,39 @@
+1. Which students have consistently improved their GPA every semester, and who among them has the highest average GPA?
+
+The workbook’s Student Semesters table shows each student’s GPA per term. Eight students’ GPAs increase every single semester: Ravi Patel, David Garcia, Hassan Yousaf, Zanele Dlamini, Helena Svensson, Erik Larsson, Chioma Okafor and Sofia Rossi. Among them, Chioma Okafor and Erik Larsson have the highest average GPAs (≈ 3.58 and 3.57 respectively). This shows steady improvement under Talisma’s 4.0 scale.
+###
+2. Which faculty member has taught the highest number of distinct students across all programmes?
+
+By counting unique StudentID values in the Student Subjects sheet for each FacultyID, we find that Nisha Bakr (Faculty ID FAC0098) taught 23 distinct students—more than any other instructor. Ingrid Lee (FAC0101) and Fatemeh Ramirez (FAC0103) follow with 20 and 17 students respectively.
+###
+3. Using the scale defined in the FAQ, which subjects exhibit the highest and lowest average grade points?
+
+Converting numeric scores to grade points reveals that Big Data Analytics and Blockchain Technology yield the highest average grade points (≈ 4.0), while Ethics in Technology and Capstone Project have the lowest (≈ 1.7–2.0). These extremes may indicate courses where grading standards differ significantly across subjects or faculty.
+###
+4. Which programme shows the highest GPA variance across semesters, and which has the most consistent GPAs?
+
+Joining Student Semesters with Enrolled Students and computing GPA variance by programme shows that BSc Computer Science exhibits the highest variance (≈ 0.029), while Bachelor of Business Administration (BBA) has the most consistent GPAs (average variance ≈ 0.0185). Programme variance helps identify where student performance fluctuates more.
+###
+5. Identify students who have never scored below 70 in any subject yet have an average GPA below 3.0, given scale defined by the university.
+
+Analyzing the Student Subjects sheet for minimum scores and average GPA per student reveals one case: Sofia Rossi (ES0036) never scored below 70 but has an overall GPA of ≈ 2.99, slightly under 3.0. This occurs because many of her scores are in the 70–75 range, which correspond to grade points of 1.7–2.3 on the 4.0 scale.
+###
+6. Do merit‑based scholarship recipients have higher pre‑university achievements than need‑based or non‑scholarship students?
+
+Merging prospective and enrolled records (by full name) shows average high‑school GPA and SAT/ACT scores by scholarship type. Need‑based scholars have the highest high‑school GPA (≈ 3.34) but moderate test scores (≈ 1347). Merit‑based scholars have slightly lower GPAs (≈ 3.08) and the lowest test scores (≈ 1319). Students with no scholarship have higher test scores (≈ 1404) but mid‑range GPAs (≈ 3.16). Thus, merit awards do not correspond to the highest pre‑university metrics; selection may also consider other factors such as essays and extracurriculars.
+###
+7. Do students with more recommendation letters receive more merit scholarships or achieve higher GPAs?
+
+Each applicant’s Recommender Count was merged with their scholarship and GPA data. Merit‑scholarship recipients average 2.4 recommendation letters, need‑based scholars 2.1, and students with no scholarship 1.81. The correlation between recommender count and average GPA is low (~0.084), indicating that while more recommendations may slightly increase chances of a merit scholarship, they are not a strong predictor of academic performance.
+###
+8. Are there noticeable GPA differences between male and female students within each programme?
+
+Calculating average GPA by gender and programme shows modest differences: in BSc Computer Science, males average ≈ 3.45 while females average ≈ 3.40; in BBA, males average ≈ 3.42 vs. females ≈ 3.36; and in MBA, males average ≈ 3.42 vs. females ≈ 3.37. These gaps (~0.05–0.06 points) suggest slight male advantage, but differences are small.
+###
+9. Which faculty members teach subjects where student scores consistently fall below their programme’s average, and what might this imply?
+
+By computing average scores per faculty and comparing them to the overall programme average, several instructors emerge: Alicia Chandra (Computer Science) has an average score 14 points below her programme’s mean, Olga Silva (MBA) about 11 points below, and Noah Smith (Computer Science) about 10 points below. Such discrepancies may signal more rigorous grading or challenging courses and could prompt curriculum review or faculty support.
+###
+10. Does the SAT/ACT score predict first‑semester success better than high‑school GPA?
+
+Joining prospective data with students’ first‑semester GPAs shows a weak correlation (≈ 0.105) between high‑school GPA and first‑semester GPA but a stronger correlation (≈ 0.318) between SAT/ACT scores and first‑semester GPA. This suggests standardized tests may be a better predictor of early academic performance at Talisma.

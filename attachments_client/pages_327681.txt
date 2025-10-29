@@ -1,0 +1,162 @@
+WU Send Money
+
+
+
+Send a money transfer
+Allow your customers to send money for the receiver to pick up in person or to have the funds deposited directly into a bank account or mobile wallet 1. These are the steps for sending a money transfer:
+
+Step 1: Create Send Transfer intent and display Fee and FX rate.
+
+Step 2: Collect Transaction Details.
+
+Step 3: Create order and validate order information.
+
+Step 4: Display Transaction Money Transfer success page.
+
+1.png
+ 
+
+We recommend the following high-level consumer UX journey to send a money transfer from your site. We will share UX best practices to support your development.
+
+2.png
+ 
+
+Pre-transaction caching
+The key to using a cache effectively lies in determining the most appropriate data to cache and caching it at the appropriate time. We offer a set of pre-transaction APIs to provide the relevant information you need to create your user experience and populate the data elements within the primary basic APIs. The data can be added to the cache on demand the first time it is retrieved by your application. The provided data is static and can be cached in advance for efficiency purposes and it need to be refreshed at specific time intervals.
+
+Below are the lists of APIs which can be cached at Partner end as pre-transaction information.
+
+API
+
+Description
+
+Get Payout Options
+
+This API returns a list of payout methods available based on the sender and receiver country and currency provided in the request. (Click here and select Payout Options for more information.)
+
+Get Origination Currencies
+
+Provides a list of all available currencies for settlement. (Click here and select Origination Currencies for more information.)
+
+Get Currency Information
+
+Provides detailed information about the currencies supported by Western Union. If a currency code is provided as query parameter, the service will list the detailed information about that currency. (Click here and select Currency Information for more information)
+
+Get Entitled Destinations
+
+Provides a list of all available destination countries and currencies. (Click here and select Entitled Destinations for more information.)
+
+Get Field Templates
+
+Returns a list of fields that need to be collected for regulatory compliance and to complete the money transfer. This API allows you to build a single responsive UI that display fields to the customer, removing the need to create multiple screens or templates for each corridor.
+
+When there is a change of data requirements, the response will reflect those changes. If the dynamic data collection feature has been implemented, the changes will be reflected in the UI without the need of additional coding.
+
+These changes can include additional information required, field name changes, validation logic changes, among others.
+
+Sender template details the sender’s information to be collected.
+
+Receiver and template details the receiver’s information to be collected.
+
+(Click here and select Config Templates for more information.)
+
+Get Disclaimers
+
+Provides a list of applicable disclaimers, consent, and any other information required for the corridor. This API is optional for white label partners. (Click here and select Disclaimers for more information.)
+
+Get Payment Institution List
+
+Provides a list of all payment institutions which can be used for a send money transfer delivered to a bank account or mobile wallet. (Click here and select Payment Institution List for more information.)
+
+Get Payment Institution Branch List
+
+Provides detailed information about payment institution branches available for the payment institution and which can be used for a send money transfer delivered to a bank account or mobile wallet. (Click here and select Payment Institution Branch List for more information.)
+
+Steps to send money
+Step 1: Create Send Transfer intent and display Fee and FX rate
+
+Fee survey (optional): This API returns fees for all the payout options available for a particular corridor. It is a “window-shopping” capability and is optional in the Customer Journey. It does NOT include taxes and promotions (Click here and select Fee Survey for more information.).
+
+Quote: This API retrieves transaction charges (including fees, taxes, exchange rate, and promotions) on a particular payout option for a selected corridor. You will use the quote provided by the API to place the money transfer request (Click here and select Quote for more information.).
+
+Step 2: Collect Transaction Details
+
+All required information for the transfer is collected during this step.
+
+Step 3: Create order and validate order information
+
+Once all required information has been collected, Western Union uses the Create order API to validate the order. We recommend developing a review page that allows the consumer to confirm or make changes to the transaction details (Click here and select Create Order for more information.).
+
+NOTE:  If dynamic data collection has been enabled and additional data is required from the customer, Western Union will send an error specifying the missing information. We recommend creating a dynamic UI to prompt the customer to provide the missing fields.
+
+Step 4: Display Transaction order success page
+
+Confirm order API: When the customer confirms the transaction, the Confirm order API is used to complete the transaction with Western Union (Click here and select Confirm Order for more information.).
+
+If the transaction is successful, the Confirm order API will return all information required to generate a receipt for the customer. The response includes a tracking number called the Money Transfer Control Number (MTCN). If the transaction is unsuccessful, the response will contain an error code and description
+
+NOTE: The MTCN is used by the receiver to pick up funds at a Western Union agent location when cash payout is selected by the sender. The MTCN is also required to perform all post-transaction functions, such as transfer inquiry, cancellation, refund, etc.
+
+ 
+
+Status notifications (optional)
+You can subscribe to outbound web service notifications whenever there is a change to the transaction status, such as when the transaction is paid to the receiver. These notifications can be used to send communications to your customer via mobile app notifications, email, SMS or status pages in your UX (Click here and select Partner Notification for more information.)
+
+The following table shows common examples of notifications we may send:
+
+Notification
+
+Message
+
+Transfer paid
+
+The money transfer has been picked up by the receiver.
+
+Transfer cancelled
+
+The money transfer has been canceled.
+
+Transfer refunded
+
+The refund has been processed.
+
+Post-transaction services
+The following APIs are available to support post-transaction services and can be integrated into your customer care channels to enable your representatives to provide customer support. They can also be used to develop self-service functionality to be used by your end customers.
+
+API
+
+Description
+
+API
+
+Description
+
+Transaction inquiry
+
+Retrieves the status of the money transfer.
+
+Click here and select Transfer Inquiry for more information.
+
+Cancel/Refund
+
+Enables to cancel and refund a money transfer.
+
+Click here and select Cancel for more information.
+
+Suspend
+
+Can be used to put a transfer in Suspend status, which will not allow the transfer to be paid to the receiver.
+
+Click here and select Suspend for more information.
+
+Resume
+
+Makes a suspended transfer available for payout.
+
+Click here and select Resume for more information.
+
+Modify
+
+Used to modify a money transfer’s non-financial information.
+
+Click here and select Modify for more information.

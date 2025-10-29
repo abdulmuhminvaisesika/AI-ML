@@ -1,0 +1,28 @@
+WU Receive Money
+
+
+
+
+Receive money
+Our co-branded solution offers the capability for your customers to redirect a Western Union money transfer sent to them for cash payout and deposit the funds directly into their account with your institution. These are the steps for receiving a money transfer into an account.
+
+Step 1: Collect MTCN and information required
+
+In this step, the customer enters the MTCN of the money transfer to be deposited into an account.
+
+Step 2: Confirm money transfer availability
+
+Receive API : Using the MTCN, customer name, and bank details, Western Union confirms the availability of the money transfer (Click here and select Receive Order Validate for more information.)
+
+Step 3: Collect customer confirmation and proceed with the funds deposit
+
+After confirming availability of the money transfer, the customer confirms to continue with the redirect and funds will be deposited into the account.
+
+Confirm API : This API completes the transfer of the funds to the customer’s account (Click here and select Receive Order Confirm for more information.)
+
+Step 4: Present transaction receipt to customer
+
+Receipt and confirmation of the money transfer deposit into the customer’s account is presented.
+
+3.png
+ 

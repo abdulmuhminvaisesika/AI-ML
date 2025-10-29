@@ -1,0 +1,184 @@
+📘 Western Union API – Key Questions
+Page_131074
+
+
+
+What are the two main security components required to connect with Western Union APIs?
+
+
+How many sets of API keys are provided per account, and what is the purpose of each set?
+
+
+Which values are allowed for the x-wu-channel header, and what does this field indicate?
+
+
+What does it mean if DATA_MORE = "Y" is received in a Config API response, and what should the client do next?
+
+If a client receives HTTP status code 401, what type of error does it indicate?
+
+
+What are the key fields returned in a 400 Invalid Input or 500 Server Error, according to the WUError schema?
+
+=====================================================================================================
+
+N.txt
+
+
+What authentication and security mechanisms must a client application implement to connect with Western Union APIs?
+
+
+In the API header structure, what is the role of x-wu-externalRefId and is it mandatory or optional?
+
+What should a client do when the API response contains "moreData": "Y" along with numOfRecords and totalNumOfRecords?
+
+
+List and describe at least two fields returned in a WUError response for a 400 – Invalid Input error.
+
+
+Based on the response example, what are the country and currency codes for Albania, and how many currencies are listed for it?
+
+
+
+
+==================================================================================
+
+page_65703
+
+
+
+What information must the customer provide in Step 1 to initiate the deposit of a Western Union money transfer into their account?
+
+
+Which API is used to confirm the availability of a Western Union money transfer using MTCN and customer details?
+
+At what point in the process does the customer confirm they wish to redirect the funds to their account?
+
+Which API completes the transfer of funds into the customer's account?
+
+What is the final action taken in the flow after the funds have been successfully deposited?
+
+
+
+
+
+image 
+1.png
+
+
+What is the first step a customer must take to initiate a money transfer?
+
+Which entity is responsible for calculating options, fees, and foreign exchange (FX) rates in the transaction process?
+
+After the partner validates the transaction, what are the next two steps they perform before storing the transaction?
+
+At what point in the process does the customer receive a confirmation number and receipt?
+
+Who generates the final notification once the funds are available for the receiver?
+
+
+==========================================================
+
+page_327681
+
+
+What are the four main steps involved in sending a money transfer through the platform?
+
+List any four pre-transaction APIs that can be cached at the partner end.
+
+What is the role of the 'Quote' API in the money transfer process?
+
+Which API is used when the customer confirms the transaction and completes the money transfer?
+
+What notifications might be sent to partners regarding the status of a money transfer? Provide at least two examples.
+
+What post-transaction APIs are available for customer care or self-service functionality?
+
+
+
+
+===============================================================
+page_131074
+
+
+What kind of authentication is required to access Western Union’s APIs?
+
+What are the required headers that must be included in every API request after Okta authorization?
+
+Explain what the x-wu-apiKey header is used for and how its expiry is handled.
+
+What does it mean when the API response returns "moreData": "Y"?
+
+List at least three common HTTP error codes used in these APIs and their meanings.
+
+What are the key fields present in the WUError object returned during a 400 or 500 error response?
+
+=======================
+Y.txt
+
+What does the value "moreData": "Y" indicate in the API response?
+(Expected answer: There are more records to be fetched beyond the current page.)
+
+How many records are returned in the current API response?
+(Expected answer: 10)
+
+What is the total number of records available as per the response metadata?
+(Expected answer: 261)
+
+Which country code is associated with the currency "Angolan Kwanza"?
+(Expected answer: AO)
+
+List all the currencies associated with the country code "AI" (Anguilla).
+(Expected answer: XCD and USD)
+
+
+
+================================================
+
+N.txt
+
+
+What type of authentication is required to connect with Western Union APIs? Explain how it ensures transport-level security.
+
+List the mandatory header fields that must be included in every API request and explain their purpose.
+
+What are the allowed values for the x-wu-channel header?
+
+How should a client application retrieve a security token to call Western Union APIs?
+
+What does the response field moreData: "Y" signify, and how should the client handle it?
+
+What kind of error details are returned for a 400 or 500 error in Western Union APIs? Mention the key fields in the error schema.
+
+
+
+=============================================
+
+relaxation on TCS rates due to the COVID.docx
+
+
+Was there any relaxation on TCS rates due to the COVID-19 situation?
+
+In Case 1, when did TCS become applicable for Mr. A, and on what amount?
+
+What is the TCS applicability in Case 2 for Mr. B after October 1, 2020?
+
+Why is 5% TCS applied in Case 3 for Mr. C’s education loan transfer even though the reduced rate is 0.5%?
+
+===========================================================
+page_98317
+
+
+
+
+When did TCS come into effect and from which date are international money transfers counted toward the threshold?
+
+What is the threshold amount after which 5% TCS is applicable on international money transfers under LRS?
+
+What is the reduced TCS rate for money transfers related to education paid through a loan, and under what condition does it apply?
+
+Is TCS applicable if the income being transferred has already been taxed (i.e., tax-paid income)?
+
+Can the TCS amount be claimed back if the international money transfer is cancelled?
+
+Are there any exemptions from TCS as per the policy outlined by Western Union and YES Bank? If so, name one
+

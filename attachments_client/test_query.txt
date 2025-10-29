@@ -1,0 +1,61 @@
+What is Confluence?
+
+Confluence is a team collaboration and documentation tool developed by Atlassian. 
+It allows teams to create, share, and manage content in one central location. It is widely used for:
+
+Project documentation
+
+Meeting notes
+
+Knowledge base articles
+
+SOPs and internal guides
+
+
+A Confluence page is a digital document or workspace created within Atlassian Confluence, a popular collaboration and 
+documentation tool used by teams and organizations.
+
+Confluence is a web-based team collaboration and knowledge management platform. It allows users to:
+
+Create and edit content (pages) collaboratively
+
+Organize information into spaces and categories
+
+Share documents, plans, SOPs, and project details
+
+Comment, tag, and discuss with teammates in real-time
+
+
+page- SBI Digital Operations – Knowledge Hub
+
+
+
+What are the key internal controls implemented by SBI for ACH transactions as per RBI and NPCI guidelines?
+
+In the ACH transaction lifecycle at SBI, which entities are involved and what roles do they play?
+
+				
+
+What are the secure steps involved in uploading encrypted ACH batch files via the SBI CMS Portal?
+
+
+
+
+WU Send Money
+
+
+What are the main steps to send a money transfer using Western Union?
+
+What is the purpose of the Money Transfer Control Number (MTCN)?
+
+
+
+SBI_ACH_Usage_Overview.pdf
+
+What are the primary use cases of ACH at State Bank of India (SBI)?
+
+How does the ACH transaction process flow work at SBI from file preparation to reconciliation?
+
+
+
+

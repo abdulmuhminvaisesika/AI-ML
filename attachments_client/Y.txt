@@ -1,0 +1,128 @@
+x-wu-externalRefId: 232444
+x-wu-counterId: 543400ETW01A
+x-wu-apiKey: kadmjlkvgf
+x-wu-channel: WEB
+x-wu-terminalId: 2331
+x-wu-fsid: WGBS543400T
+x-wu-systemVersion: 23434
+User-Agent: PostmanRuntime/7.26.8
+Accept: */*
+Postman-Token: 2b8d6552-1ecc-453d-b9d2-42ed4c970e00
+Host: config-partner-gateway-apps-pi.kubesvcsnv.digitalprod.awswuintranet.net
+Accept-Encoding: gzip, deflate, br
+
+Query Params:-
+senderCountry:CA
+senderCurrency:CAD
+limit:10
+offset:1
+
+
+Response:-
+{
+    "moreData": "Y",
+    "numOfRecords": 10,
+    "totalNumOfRecords": 261,
+    "countryCurrency": [
+        {
+            "country": {
+                "code": "AF",
+                "name": "Afghanistan"
+            },
+            "currency": {
+                "code": "USD",
+                "name": "US Dollar"
+            }
+        },
+        {
+            "country": {
+                "code": "XP",
+                "name": "Afghanistan US Military Base"
+            },
+            "currency": {
+                "code": "USD",
+                "name": "US Dollar"
+            }
+        },
+        {
+            "country": {
+                "code": "AL",
+                "name": "Albania"
+            },
+            "currency": {
+                "code": "ALL",
+                "name": "Albanian Lek"
+            }
+        },
+        {
+            "country": {
+                "code": "AL",
+                "name": "Albania"
+            },
+            "currency": {
+                "code": "EUR",
+                "name": "Euro"
+            }
+        },
+        {
+            "country": {
+                "code": "DZ",
+                "name": "Algeria"
+            },
+            "currency": {
+                "code": "DZD",
+                "name": "Algerian Dinar"
+            }
+        },
+        {
+            "country": {
+                "code": "AS",
+                "name": "American Samoa"
+            },
+            "currency": {
+                "code": "USD",
+                "name": "US Dollar"
+            }
+        },
+        {
+            "country": {
+                "code": "AO",
+                "name": "Angola"
+            },
+            "currency": {
+                "code": "AOA",
+                "name": "Angolan  Kwanza"
+            }
+        },
+        {
+            "country": {
+                "code": "AI",
+                "name": "Anguilla"
+            },
+            "currency": {
+                "code": "XCD",
+                "name": "East Caribbean Dollar"
+            }
+        },
+        {
+            "country": {
+                "code": "AI",
+                "name": "Anguilla"
+            },
+            "currency": {
+                "code": "USD",
+                "name": "US Dollar"
+            }
+        },
+        {
+            "country": {
+                "code": "AG",
+                "name": "Antigua And Barbuda"
+            },
+            "currency": {
+                "code": "XCD",
+                "name": "East Caribbean Dollar"
+            }
+        }
+    ]
+}

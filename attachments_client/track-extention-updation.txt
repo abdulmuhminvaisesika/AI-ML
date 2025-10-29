@@ -1,0 +1,54 @@
+/dify/web/app/(commonLayout)/datasets/new-dataset-card.tsx
+   ⤷ Entry point: Shows "New Dataset" card on UI.
+   ⤷ Redirects to dataset creation flow.
+
+        │
+        ▼
+/dify/web/app/(commonLayout)/datasets/create/page.tsx
+   ⤷ Page component for creating dataset.
+   ⤷ Loads dataset creation wizard.
+
+        │
+        ▼
+/dify/web/app/components/datasets/create/index.tsx
+   ⤷ Main Dataset Creation container component.
+   ⤷ Manages steps for dataset creation.
+
+        │
+        ▼
+/dify/web/app/components/datasets/create/step-one/index.tsx
+   ⤷ Step One UI: File upload or source selection.
+   ⤷ Imports `FileUploader`.
+
+        │
+        ▼
+/dify/web/app/components/datasets/create/file-uploader/index.tsx
+   ⤷ Handles actual file upload UI + validation on frontend.
+   ⤷ Calls `fetchSupportFileTypes` from `/service/datasets.ts`.
+
+        │
+        ▼
+/dify/web/service/datasets.ts
+   ⤷ Frontend service layer (API client).
+   ⤷ Defines `fetchSupportFileTypes()` → calls backend API.
+   ⤷ API Endpoint: `/console/api/files/support-types`
+
+        │
+        ▼
+/dify/api/controllers/console/files.py
+   ⤷ Backend API controller.
+   ⤷ Defines `FileSupportTypeApi`.
+   ⤷ Returns `{"allowed_extensions": DOCUMENT_EXTENSIONS + ... }`.
+
+        │
+        ▼
+/dify/api/constants/__init__.py
+   ⤷ Defines `DOCUMENT_EXTENSIONS`, `IMAGE_EXTENSIONS`, `VIDEO_EXTENSIONS`, `AUDIO_EXTENSIONS`.
+   ⤷ The source of truth for allowed file extensions.
+
+        │
+        ▼
+/dify/api/controllers/console/files.py (again)
+   ⤷ Upload validation happens here.
+   ⤷ Incoming file’s extension is checked against allowed list.
+   ⤷ If not in allowed list → rejected.
